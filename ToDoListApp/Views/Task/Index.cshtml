@@ -1,0 +1,18 @@
+﻿@model List<ToDoListApp.Models.Task>
+
+@{
+    ViewData["Title"] = "Task List";
+}
+
+<h2>Task list</h2>
+
+<div class="task-list">
+    @foreach (var item in Model)
+    {
+        <div class="task-container">
+            <span class="Name">@item.Name</span>
+            <span class="DateTime">@item.DueDate.ToShortDateString()</span>
+            <span class="Category">@item.Category.Name</span>
+        </div>
+    }
+</div>
